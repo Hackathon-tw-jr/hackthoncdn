@@ -25,7 +25,7 @@ body {
 /*full screen bg*/
 #top {
     height: 100vh;
-    background: url(../p_img/bg/top.webp) repeat center fixed;
+    background: url(https://imgcdnv.hackathonjr.tk/p_img/bg/top.png) repeat center fixed;
     background-size: auto;
     max-width: 100%;
     max-height: 100%;
@@ -42,7 +42,7 @@ body {
 }
 
 #main {
-    background: url(../p_img/bg/main.webp) center fixed;
+    background: url(https://imgcdnv.hackathonjr.tk/p_img/bg/main.png) center fixed;
 }
 
 img {
