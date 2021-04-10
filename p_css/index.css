@@ -1,4 +1,4 @@
- /*@-moz-document url-prefix() { !* Disable scrollbar Firefox *!*/
+/* @-moz-document url-prefix() { !* Disable scrollbar Firefox *!*/
 /*    html{*/
 /*        scrollbar-width: none;*/
 /*    }*/
@@ -13,10 +13,13 @@
 /*    width: 0;*/
 /*    background: transparent; !* Disable scrollbar Chrome/Safari/Webkit *!*/
 /*}*/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "PingFang TC", "Microsoft JhengHei", sans-serif !important;
-    margin: 0 0 0 0;
+    margin: 0;
     scroll-behavior: smooth;
     width: 100vw;
     overflow-x: hidden;
@@ -25,24 +28,32 @@ body {
 /*full screen bg*/
 #top {
     height: 100vh;
-    background: url(https://imgcdnv.hackathonjr.tk/p_img/bg/top.png) repeat center fixed;
+    background: url(../p_img/bg/top.png) repeat center fixed;
     background-size: auto;
     max-width: 100%;
     max-height: 100%;
 }
 
+#top_icon {
+    height: 28vh;
+    left: 9vw;
+    top: 12vh;
+}
+
+#top_text {
+    height: 25vh;
+    left: 11vw;
+    top: 16vh;
+}
+
 #top_content {
-    position: absolute;
-    left: 50vw;
-    transform: translate(-50%, -60%);
-    max-width: 100%;
-    max-height: 100%;
-    width: 93vw;
-    top: 67vh;
+    left: 6vw;
+    top: 28vh;
+    width: 90vw;
 }
 
 #main {
-    background: url(https://imgcdnv.hackathonjr.tk/p_img/bg/main.png) center fixed;
+    background: url(../p_img/bg/main.png) center fixed;
 }
 
 img {
@@ -90,7 +101,7 @@ img {
 
 /*feature*/
 #fthr {
-    margin-top: 25vh;
+    margin-top: 6vh;
 }
 
 .deco_2 {
@@ -226,6 +237,7 @@ img {
 
 #theme {
     padding-bottom: 18vh;
+    margin-top: -19vh;
 }
 
 /*method*/
@@ -270,12 +282,13 @@ img {
     bottom: 27vh;
 }
 
-.only_web > span {
+#web {
     left: 12vw;
     position: relative;
-    -webkit-text-stroke: 0.05vw #998675;
     font-size: 6.6vw;
-    color: #E2A569;
+    -webkit-text-stroke: 0.1vw #998675;
+    color: transparent;
+    font-family: "source-han-serif-tc", serif;
 }
 
 .this_method {
@@ -361,7 +374,7 @@ img {
 #special {
     z-index: 7;
     position: relative;
-    padding-bottom: 57vh;
+    padding-bottom: 48vh;
 }
 
 .cent {
@@ -392,6 +405,15 @@ img {
     color: transparent;
     top: 4vh;
     -webkit-text-stroke: 0.05vw #998675;
+}
+
+#spe_line {
+    background-color: #534741;
+    width: 40vw;
+    height: 0.2vh;
+    position: relative;
+    left: 30vw;
+    top: 23vh;
 }
 
 #spe_title_deco {
@@ -482,6 +504,7 @@ img {
 /*celebrity*/
 #people {
     padding-bottom: 30vh;
+    padding-top: 1vh;
 }
 
 .deco_un {
@@ -529,7 +552,7 @@ img {
     position: relative;
     font-family: "source-han-serif-tc", serif;
     font-weight: 500;
-    bottom: 41vh;
+    bottom: 37vh;
     letter-spacing: 0.983vw;
 }
 
@@ -578,7 +601,8 @@ img {
 
 #price {
     padding-bottom: 100vh;
-    margin-top: 30vh;
+    padding-top: 15vh;
+    margin-top: 15vh;
 }
 
 #price > .content {
@@ -648,6 +672,7 @@ img {
 /*rule*/
 #rule {
     margin-top: -14vh;
+    padding-top: 21vh;
 }
 
 .deco_rule {
@@ -670,6 +695,11 @@ img {
     transform: translateX(-13%);
 }
 
+.hover_dark:hover {
+    filter: brightness(75%);
+    cursor: pointer;
+}
+
 #rule_par {
     width: 27vw;
     position: absolute;
@@ -689,6 +719,28 @@ img {
     position: absolute;
     top: 21vh;
     transform: translateX(20%);
+}
+
+#overlay_judge, #overlay_vote {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 50;
+    cursor: pointer;
+}
+
+#click_judge, #click_vote{
+    position: absolute;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #rule_title::before {
@@ -720,8 +772,8 @@ img {
 
 /*schedule*/
 #schedule {
-    padding-bottom: 60vh;
-    margin-top: -2vh;
+    padding-bottom: 39vh;
+    margin-top: -22vh;
 }
 
 .deco_sche {
