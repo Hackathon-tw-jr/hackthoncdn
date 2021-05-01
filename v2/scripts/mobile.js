@@ -7,3 +7,8 @@ function nav_open() {
         x.style.display = "block";
     }
 }
+
+function card_click(){
+    $("#card").toggleClass("card_click").delay(5000).toggleClass('card');
+    $("#env_bot,#env_top").toggleClass("env_left");
+}
