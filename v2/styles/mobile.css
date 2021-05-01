@@ -64,7 +64,7 @@ section {
 
 /*main*/
 #main {
-    background: url("https://res.cloudinary.com/djbhhlpqm/image/upload/f_auto/v1619099588/v2/main.png") center fixed;
+    background: url("https://res.cloudinary.com/djbhhlpqm/image/upload/f_auto/v1619099588/v2/main") center fixed;
     overflow: hidden;
 }
 
